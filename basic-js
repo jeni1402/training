@@ -1,0 +1,34 @@
+// variables
+let fname ="jeni";
+var age =23;
+const place ="Tvl";
+console.log(fname,place ,age)
+
+// functions
+function details(fullname,age,place){
+console.log("name is :"+fullname+"age is :"+age +"place :"+place)
+}details("jeni",22,"Tvl")
+
+
+// arrow function
+
+const details1=(fname ,age)=>console.log("full name: "+fname +"age :"+age)
+details1("jeni",22)
+
+// array
+const arr=[1,2,3,4,5]
+for (let i=0;i<=arr.length;i++){
+    console.log("array value :"+i)
+}
+
+// loop
+let fruits=["apple","banana","pine apple"];
+fruits.forEach((x)=>console.log(x))
+
+// objects
+const obj={
+    fname:"jeni",
+    age:22,
+    place:"Tvl"
+}
+console.log(obj)
