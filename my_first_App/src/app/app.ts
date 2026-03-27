@@ -9,12 +9,12 @@ import { NgIf } from "@angular/common";
   selector: 'app-root',
   standalone: true,
   templateUrl:"./app.html",
-  styleUrls:["./style.css"],
+  styleUrls:["./app.css"],
 
 })
 export class App {
   name = '';
-  src = 'src/assests/be late for the meeting vector.jpeg';
+  // src = 'src/assests/be late for the meeting vector.jpeg';
   title ="Sample";
 
   showMessage() {
