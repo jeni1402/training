@@ -1,22 +1,21 @@
 
 import { bootstrapApplication } from "@angular/platform-browser";
 import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { NgIf } from "@angular/common";
 
 @Component({
+  imports:[NgIf,FormsModule],
   selector: 'app-root',
   standalone: true,
-  template: `
-    <h1>Hi I'm {{ name }}</h1>
-    <p>I'm creating a very simple app from scratch</p>
+  templateUrl:"./app.html",
+  styleUrls:["./app.css"],
 
-    <img [src]="src" width="200">
-
-    <button (click)="showMessage()">Click Me!</button>
-  `
 })
 export class App {
-  name = 'jeni';
+  name = '';
   src = 'src/assests/be late for the meeting vector.jpeg';
+  title ="Sample";
 
   showMessage() {
     alert("Welcome");
