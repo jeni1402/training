@@ -9,7 +9,7 @@ import { NgIf } from "@angular/common";
   selector: 'app-root',
   standalone: true,
   templateUrl:"./app.html",
-  styleUrls:["./app.css"],
+  styleUrls:["./style.css"],
 
 })
 export class App {

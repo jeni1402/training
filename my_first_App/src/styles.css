@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+    background-color: cornflowerblue;
+}
+app-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.container{
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    /* background: blueviolet; */
+}
+
+h1{
+    color: aqua;
+}
+input{
+    padding: 10px;
+    width: 220px;
+    margin-top: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+p{
+    margin-top: 20px;
+    font-size: 14px;
+    color: chocolate;
+}
