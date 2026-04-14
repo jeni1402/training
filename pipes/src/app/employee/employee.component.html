@@ -1,0 +1,11 @@
+<h2>Employee List</h2>
+
+<input [(ngModel)]="searchText" placeholder="Search employee">
+
+<ul>
+  <li *ngFor="let emp of employees | filter:searchText">
+    <strong>{{ emp.name | nameFormat }}</strong>
+    <p>Salary: {{ emp.salary | currency:'INR' }}</p>
+    <p>Joining Date: {{ emp.doj | date:'fullDate' }}</p>
+  </li>
+</ul>
