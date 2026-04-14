@@ -1,0 +1,28 @@
+<h2>Standalone Angular Directives</h2>
+
+<!-- ngIf -->
+<button (click)="toggle()">Toggle Text</button>
+<p *ngIf="isVisible">This is ngIf example</p>
+
+<hr>
+
+<!-- ngFor -->
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<hr>
+
+<!-- ngClass -->
+<button (click)="toggleClass()">Toggle Class</button>
+<p [ngClass]="{ 'active': isActive }">Styled with ngClass</p>
+
+<hr>
+
+<!-- Custom Attribute Directive -->
+<p appHighlight>Hover me (Custom Directive)</p>
+
+<hr>
+
+<!-- Custom Structural Directive -->
+<p *appUnless="isVisible">Shown when FALSE</p>
