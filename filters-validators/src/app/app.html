@@ -1,0 +1,11 @@
+<form [formGroup]="form"(ngSubmit)='onsubmit()'>
+  <input placeholder="Name" formControlName="name">
+  <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    Name must be at least 3 letters
+  </div>
+  <input placeholder="Email" formControlName="email">
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">Enter Valid Email</div>
+  <input placeholder="Password" formControlName="password">
+  <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched">Password must be at least 8 digits</div>
+  <button type =submit [disabled]="form.invalid || submitted">{{ submitted ?'submitted' :'submit'}}</button>
+</form>
