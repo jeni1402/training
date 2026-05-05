@@ -1,0 +1,40 @@
+<h2>
+  User Form
+</h2>
+<mat-form-field>
+  <mat-label>Name</mat-label>
+  <input matInput [formControl]="form.controls.name">
+</mat-form-field>
+<mat-form-field>
+   <mat-label>Email</mat-label>
+  <input matInput [formControl]="form.controls.email">
+</mat-form-field>
+<br><br>
+ <button mat-raised-button color="primary" (click)="addUser()">Add user</button>
+<hr>
+<h3>User List</h3>
+<table mat-table [dataSource]="users">
+  <ng-container matColumnDef='name'>
+    <th mat-header-cell *matHeaderCellDef>Name  </th>
+      <td mat-cell *matCellDef>{{user.name}}
+
+      </td>
+  </ng-container>
+
+    <ng-container matColumnDef='email'>
+    <th mat-header-cell *matHeaderCellDef>Email  </th>
+      <td mat-cell *matCellDef>{{user.email}}
+      </td>
+  </ng-container>
+  <ng-container>
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let users;let i =index"></td>
+     <button mat-button color="warn"(click)="deleteUser(i)">Delete</button>
+
+
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"> </tr>
+  <tr mat-row *matRowDef="let row ;columns:displayedColumns"></tr>
+  
+
+</table>
